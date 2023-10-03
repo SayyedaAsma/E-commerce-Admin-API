@@ -2,7 +2,7 @@
 The Inventory Management System is a  Apis based application that helps businesses manage their product inventory efficiently. It provides features for adding and updating products, tracking sales, analyzing revenue, and monitoring inventory levels. Users can filter and search for products, view sales data by date range, and receive low stock alerts. The system also maintains a history of inventory changes for auditing purposes.
 
 #  Database Schema
-we are using mysql relational database .tool used is workbench.
+we are using mysql relational database .workbench is used to as a relational dbms tool. To run apis in vs code we are using thunderclient.it can be easily used by installing its extension.
 ### Product and Inventory:
 
 #### Relationship Type:
@@ -80,6 +80,18 @@ below are the installation command needed to run in vscode inorder to run the co
   pip install mysqlclient
   pip3 install fastapi "uvicorn[standard]"
 ```
+
+for making migrations in database 
+```bash
+alembic revision --autogenerate -m "initial migrations"
+alembic upgrade head
+```
+
+for running app
+```bash
+ uvicorn main:app --reload
+```
+
 
 
 
